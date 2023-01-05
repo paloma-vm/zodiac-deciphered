@@ -5,8 +5,176 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Document{% endblock %}</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- BOOTSTRAP THEME-->
+    <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.css">
 </head>
 <body>
+  <!-- NAVBAR -->
+
+  <nav class="py-2 bg-secondary border-bottom">
+    <div class="container d-flex flex-wrap mx-0 col-lg-12">
+      <ul class="nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link link-dark px-2">About</a></li>
+        <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Popular Topics</a></li> -->
+        <li class="nav-item"><a class="nav-link link-dark px-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+          Explore
+        </li>
+      </ul>
+      <ul class="nav">
+        <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li> -->
+        
+        <li class="nav-item">
+            <!-- Button trigger modal -->
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Sign up for updates
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- HEADER -->
+  <header class="py-3 px-3 mb-2 border-bottom header-light bg-primary sticky-top">
+    <div class="row d-flex flex-wrap justify-content-space-between">
+      <a href="/" class=" col d-flex align-items-center mb-lg-0 me-lg-auto text-light text-decoration-none">
+        <img src="{{ url_for('static', filename='images/Zodiac_Killer_symbol.png') }}" class="" alt="..." width="40" height="40"> 
+
+        <span class="fs-4 px-2">Deciphered</span>
+      </a>
+      <form class="col col-3-lg col-3-md col-6-sm mb-lg-0" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+    </div>
+  </header>
+
+  <!-- OFFCANVAS -->
+  <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Button with data-bs-target
+  </button> -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Topics of Interest</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        Click on a topic to read more about it.
+        <div class="p-4">
+          <!-- <h4 class="fst-italic">Links</h4> -->
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">Drafting</a></li>
+            <li><a href="#">Zines</a></li>
+            <li><a href="#">Sketches</a></li>
+            <li><a href="#">Ciphers</a></li>
+            <li><a href="#">Letters</a></li>
+            <li><a href="#">Renaissance</a></li>
+            <li><a href="#">Timeline</a></li>
+            <li><a href="#">Crimes</a></li>
+            <li><a href="#">Opinion</a></li>
+          </ol>
+        </div>
+
+        <!-- <div class="p-4">
+          <h4 class="fst-italic">Other Useful Sites</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+    <!-- SCROLLER
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">Ciphers</a>
+      <a class="p-2 link-secondary" href="#">Sketches</a>
+      <a class="p-2 link-secondary" href="#">Timeline</a>
+      <a class="p-2 link-secondary" href="#">Letters</a>
+      <a class="p-2 link-secondary" href="#">Zines</a>
+      <a class="p-2 link-secondary" href="#">Drafting</a>
+      <a class="p-2 link-secondary" href="#">Renaissance</a>
+      <a class="p-2 link-secondary" href="#">Crimes</a>
+      <a class="p-2 link-secondary" href="#">Opinion</a>
+    </nav>
+  </div> -->
+
+
+  <!-- MODAL -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign up to be notified of new content</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <fieldset>
+              <!-- <legend>Legend</legend> -->
+              <div class="form-group">
+                <label for="exampleInputPassword1" class="form-label mt-4">Name</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="First and Last">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+  
+              <div class="form-group">
+                <label for="exampleSelect2" class="form-label mt-4">How did you find this site?</label>
+                <select multiple="" class="form-select" id="exampleSelect2">
+                  <option>Search results</option>
+                  <option>Link from Reddit</option>
+                  <option>Link from forum</option>
+                  <option>Word of mouth</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-4">Please use this space for any comments, questions, or suggestions.</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+         
+              
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
 {% block content %}{% endblock %}
+<!-- FOOTER -->
+  <!-- <div class="container m-0 p-0"> -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-3 my-4 border-top bg-light">
+        <p class="col-md-4 mb-0 text-muted">© 2022 Deciphered, Inc</p>
+    
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <img src="{{ url_for('static', filename='images/Zodiac_Killer_symbol.png') }}" class="" alt="..." width="40" height="40"> 
+          <!-- got help with the line above from https://stackoverflow.com/questions/59478573/how-to-display-images-from-folder-in-python-html-and-flask -->
+          <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
+        </a>
+    
+        <ul class="nav col-md-4 justify-content-end">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
+        </ul>
+      </footer>
+    <!-- </div> -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>  
+
 </body>
 </html>
