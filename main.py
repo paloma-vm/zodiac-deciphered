@@ -27,7 +27,7 @@ def sketches():
 
 @app.errorhandler(404)
 def page_not_found(error):
-    """A error page for this site"""
+    """An error page for this site"""
     return render_template("404-error-page.html")
 
 if __name__ == '__main__':

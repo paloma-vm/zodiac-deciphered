@@ -8,24 +8,25 @@
     <div class="row g-5 pt-5">
       <div class="col-md-12">
         <h3 class="pb-4 mb-4 fst-italic border-bottom">
-          the Sketches
+          The Sketches
         </h3>
 
         <article class="blog-post">
           <h2 class="blog-post-title mb-1">Details in the sketches give clues to Zodiac's identity.</h2>
           <p class="blog-post-meta">November 7, 2022 by <a href="#">Paloma</a></p>
 
-          <img src="images/bomb-sketch.jpeg" class="img-fluid w-50">
+          <img src="{{ url_for('static', filename='images/bomb-sketch.jpeg') }}" class="img-fluid w-50">
+
 
           <p>This sketch was page 5 of a 6-page letter sent to the San Francisco Chronicle on November 9th, 1969.</p>
 
           
-          <img src="images/bomb-sketch close-up.jpeg" class="img-fluid w-50"><img src="images/road-crown.jpeg" class="img-fluid w-50">
+          <img src="{{ url_for('static', filename='images/bomb-sketch close-up.jpeg') }}" class="img-fluid w-50 pe-2"><img src="{{ url_for('static', filename='images/road-crown.jpeg') }}" class="img-fluid w-50">
           <br>
-          <p>When looking at the road cross-section,notice that the road has been drawn with a crown (see reference drawing). </p>
+          <p>When looking at the road cross-section,notice that the road has been drawn with a crown. (see reference drawing on right) </p>
           <br>
 
-          <img src="images/car-sketch-zoom.jpeg" class="img-fluid w-50">
+          <img src="{{ url_for('static', filename='images/car-sketch-zoom.jpeg') }}" class="img-fluid w-50">
 
           <p>The way the vehicles are drawn on an angle emphasizes the road crown.</p>
           <br>

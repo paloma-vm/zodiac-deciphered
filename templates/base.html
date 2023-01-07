@@ -16,9 +16,9 @@
   <nav class="py-2 bg-secondary border-bottom">
     <div class="container d-flex flex-wrap mx-0 col-lg-12">
       <ul class="nav me-auto">
-        <li class="nav-item"><a href="#" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link link-dark px-2">About</a></li>
-        <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Popular Topics</a></li> -->
+        <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="{{ url_for('.homepage', _anchor='about') }}" class="nav-link link-dark px-2">About</a></li>
+        <!-- got help with the anchor above ^ from https://stackoverflow.com/questions/35843675/link-to-a-specific-location-in-a-flask-template -->
         <li class="nav-item"><a class="nav-link link-dark px-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           Explore
         </li>
@@ -78,15 +78,6 @@
             <li><a href="#">Opinion</a></li>
           </ol>
         </div>
-
-        <!-- <div class="p-4">
-          <h4 class="fst-italic">Other Useful Sites</h4>
-          <ol class="list-unstyled">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-          </ol>
-        </div> -->
       </div>
     </div>
   </div>
@@ -167,8 +158,8 @@
         </a>
     
         <ul class="nav col-md-4 justify-content-end">
-          <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="{{ url_for('.homepage', _anchor='about') }}" class="nav-link px-2 text-muted">About</a></li>
           <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact</a></li>
         </ul>
       </footer>
