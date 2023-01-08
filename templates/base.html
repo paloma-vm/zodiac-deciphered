@@ -14,19 +14,19 @@
   <!-- NAVBAR -->
 
   <nav class="py-2 bg-secondary border-bottom">
-    <div class="container d-flex flex-wrap mx-0 col-lg-12">
+    <div class="container d-flex flex-wrap mx-0">
       <ul class="nav me-auto">
         <li class="nav-item"><a href="/" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="{{ url_for('.homepage', _anchor='about') }}" class="nav-link link-dark px-2">About</a></li>
+        <li class="nav-item"><a href="/#about" class="nav-link link-dark px-2">About</a></li>
+        <!-- <li class="nav-item"><a href="{{ url_for('.homepage', _anchor='about') }}" class="nav-link link-dark px-2">About</a></li> -->
         <!-- got help with the anchor above ^ from https://stackoverflow.com/questions/35843675/link-to-a-specific-location-in-a-flask-template -->
+        <!-- Then I read that it can also be simply /#about -->
         <li class="nav-item"><a class="nav-link link-dark px-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           Explore
         </li>
       </ul>
-      <ul class="nav">
-        <!-- <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Sign up</a></li> -->
-        
-        <li class="nav-item">
+      <ul class="nav me-auto">        
+        <li class="nav-item d-flex justify-content-end">
             <!-- Button trigger modal -->
           <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Sign up for updates
@@ -43,8 +43,8 @@
 
         <span class="fs-4 px-2">Zodiac Deciphered</span>
       </a>
-      <form class="col col-3-lg col-3-md col-6-sm mb-lg-0" role="search">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      <form class="col col-3-lg col-3-md col-3-sm mb-lg-0" role="search">
+        <input type="search" class="form-control w-50" placeholder="Search..." aria-label="Search">
       </form>
     </div>
   </header>

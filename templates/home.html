@@ -23,9 +23,16 @@
           <div class="carousel-item">
             <img src="{{ url_for('static', filename='images/doerr-no-glasses.png') }}" class="d-block w-100 img-fluid" style="object-fit: contain; object-position: center; height: 50vh; overflow: hidden;" alt="...">
           </div>
-          <div class="carousel-item">
+          <!-- <div class="carousel-item">
             <img src="{{ url_for('static', filename='images/compare-mustache.png') }}" class="d-block w-100 img-fluid" style="object-fit: contain; object-position: center; height: 50vh; overflow: hidden;" alt="...">
+          </div> -->
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/with-mustache.png') }}" class="d-block w-100 img-fluid" style="object-fit: contain; object-position: center; height: 50vh; overflow: hidden;" alt="...">
           </div>
+          <div class="carousel-item">
+            <img src="{{ url_for('static', filename='images/fair-mustache.png') }}" class="d-block w-100 img-fluid" style="object-fit: contain; object-position: center; height: 50vh; overflow: hidden;" alt="...">
+          </div>
+
           <div class="carousel-item">
             <img src="{{ url_for('static', filename='images/older copy.png') }}" class="d-block w-100 img-fluid" style="object-fit: contain; object-position: center; height: 50vh; overflow: hidden;" alt="...">
           </div>
@@ -100,9 +107,9 @@
             <form class="form">
               <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Choose option:</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
-                <option value="3">Maybe</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                <option value="maybe">Maybe</option>
               </select>
               <div class="text-end">
                 <button type="button" class="btn btn-primary" ><a href="/poll-results" class="text-white text-decoration-none">Submit</a></button>

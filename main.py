@@ -2,10 +2,14 @@ from flask import Flask, request, render_template
 from dotenv import load_dotenv
 import os
 import requests
+from flask_pymongo import PyMongo
 
 load_dotenv()
 
 app = Flask(__name__)
+
+app.config["MONGO_URI"] = "mongodb://localhost:27017/pollAnswers"
+mongo = PyMongo(app)
 
 @app.route('/')
 def homepage():
@@ -18,6 +22,9 @@ def poll_results():
     """A page to display the poll results"""
 
     return render_template('poll-results.html')
+
+
+
 
 @app.route('/sketches')
 def sketches():
