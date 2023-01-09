@@ -15,7 +15,7 @@
       <div class="card-body">
         <h4 class="card-title mb-2">Do you think Paul Doerr was the Zodiac?</h4>
         <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-        <form action="/poll-results" method="POST" class="form">
+        <form action="/poll" method="POST" class="form">
           <!-- <label></label> -->
           <select name="user_answer" id="user_answer" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
             <option selected>Choose option:</option>
@@ -24,7 +24,7 @@
             <option value="maybe">Maybe</option>
           </select>
           <div class="text-end">
-            <button type="button" class="btn btn-primary" ><a href="/poll-results" class="text-white text-decoration-none">Submit</a></button>
+            <button type="submit" class="btn btn-primary" >Submit</button>
           </div>
         </form>
       </div>
