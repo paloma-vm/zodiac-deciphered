@@ -8,7 +8,7 @@
 
 I used masking to cut out Zodiac characters to make a custom 404 page graphic.
 
-[wireframe & screenshots](intensive_files)
+[wireframe & screenshots](https://docs.google.com/presentation/d/1tf0flBL4_ADjE0PlxaKauDQ1PBKW_pVInCejxx1NbrI/edit?usp=sharing)
 
 The first main blocker I encountered was broken image links.  I did research and found out how to make a static folder and then changed all the links.
 
