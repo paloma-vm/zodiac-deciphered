@@ -92,31 +92,29 @@
 <!-- BELOW CARDS -->
 
   <div class="row g-5 pt-5">
-    <!-- CALL TO ACTION -->
+    <!-- CALL TO ACTION (POLL) -->
     <div class="col-md-8">
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
         What is your opinion?
       </h3>
-      <h4>Do you think Paul Doerr was the Zodiac Killer?</h4>
-      <h4>Vote <a href="/poll">here</a></h4>
 
-        <!-- <div class="card text-white bg-success mb-3 mt-3" style="max-width: 30rem;">
+        <div id="poll" class="card text-white bg-success mb-3 mt-3" style="max-width: 30rem;">
           <div class="card-header">Poll</div>
           <div class="card-body">
             <h4 class="card-title mb-2">Do you think Paul Doerr was the Zodiac?</h4>
-            <form class="form">
-              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <form action="/" method="POST" class="form">
+              <select name="user_answer" id="user_answer" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Choose option:</option>
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
                 <option value="maybe">Maybe</option>
               </select>
               <div class="text-end">
-                <button type="button" class="btn btn-primary" ><a href="/poll-results" class="text-white text-decoration-none">Submit</a></button>
+                <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
-        </div> -->
+        </div>
       
     </div>
     <div class="col-md-4">
