@@ -1,4 +1,5 @@
-# 2023-winter-intensive
+# Zodiac Deciphered
+## 2023-winter-intensive
  Continuation of Deciphered (now Zodiac Deciphered)
  For Winter Intensive 2023 (ACS 2911)
  
