@@ -1,5 +1,6 @@
 # 2023-winter-intensive
  Continuation of Deciphered (now Zodiac Deciphered)
+ For Winter Intensive 2023 (ACS 2911)
  
  [previous repo](https://github.com/paloma-vm/capstone-bootstrap-website.git)
 
